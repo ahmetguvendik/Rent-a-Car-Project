@@ -1,0 +1,23 @@
+﻿<Properties StartupConfiguration="{B0AD18C4-AE97-49F4-B9C5-6FDF5BF78694}|https">
+  <MonoDevelop.Ide.ItemProperties.Infrastructure.Persistance FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.Core.Domain FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="RentaCarProject" expanded="True">
+            <Node name="Presentation" expanded="True" selected="True">
+              <Node name="RentaCar.Presentation" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Core.Application FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.Presentation.RentaCar.Presentation FirstBuild="True" PreferredExecutionTarget="/Applications/Brave Browser.app" />
+</Properties>
