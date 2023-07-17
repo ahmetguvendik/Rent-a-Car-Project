@@ -1,23 +1,43 @@
 ﻿<Properties StartupConfiguration="{B0AD18C4-AE97-49F4-B9C5-6FDF5BF78694}|https">
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.Infrastructure.Persistance FirstBuild="True" />
-  <MonoDevelop.Ide.ItemProperties.Core.Domain FirstBuild="True" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Infrastructure/Persistance/Contexts/CarDbContext.cs">
+    <Files>
+      <File FileName="Infrastructure/Persistance/Contexts/CarDbContext.cs" Line="12" Column="49" />
+      <File FileName="Core/Domain/Entities/AppUser.cs" />
+      <File FileName="Core/Domain/Entities/AppRole.cs" />
+      <File FileName="Core/Domain/Entities/Car.cs" />
+      <File FileName="Infrastructure/Persistance/DesignTimeDbContext.cs" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="RentaCarProject" expanded="True">
-            <Node name="Presentation" expanded="True" selected="True">
-              <Node name="RentaCar.Presentation" expanded="True" />
+            <Node name="Core" expanded="True">
+              <Node name="Application" expanded="True" />
+              <Node name="Domain" expanded="True">
+                <Node name="Entities" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="Infrastructure" expanded="True">
+              <Node name="Persistance" expanded="True" selected="True">
+                <Node name="Contexts" expanded="True" />
+              </Node>
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Core.Domain FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.Presentation.RentaCar.Presentation PreferredExecutionTarget="/Applications/Brave Browser.app" />
   <MonoDevelop.Ide.ItemProperties.Core.Application FirstBuild="True" />
-  <MonoDevelop.Ide.ItemProperties.Presentation.RentaCar.Presentation FirstBuild="True" PreferredExecutionTarget="/Applications/Brave Browser.app" />
+  <DisabledProjects>
+    <String>Core/Domain/Application/Application.csproj</String>
+  </DisabledProjects>
 </Properties>

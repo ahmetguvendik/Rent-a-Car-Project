@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/ahmetguvendik/Desktop/Projeler/Asp.NetCore/RentaCarProject/Core/Domain/Application/Application.csproj",
+      "projectUniqueName": "/Users/ahmetguvendik/Desktop/Projeler/Asp.NetCore/RentaCarProject/Core/Application/Application.csproj",
       "projectName": "Application",
-      "projectPath": "/Users/ahmetguvendik/Desktop/Projeler/Asp.NetCore/RentaCarProject/Core/Domain/Application/Application.csproj",
+      "projectPath": "/Users/ahmetguvendik/Desktop/Projeler/Asp.NetCore/RentaCarProject/Core/Application/Application.csproj",
       "packagesPath": "/Users/ahmetguvendik/.nuget/packages/",
-      "outputPath": "/Users/ahmetguvendik/Desktop/Projeler/Asp.NetCore/RentaCarProject/Core/Domain/Application/obj/",
+      "outputPath": "/Users/ahmetguvendik/Desktop/Projeler/Asp.NetCore/RentaCarProject/Core/Application/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/ahmetguvendik/.nuget/NuGet/NuGet.Config"
