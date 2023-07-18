@@ -8,7 +8,7 @@ namespace Persistance.Repositories
 {
 	public class CarWriteRepository : WriteRepository<Car>, ICarWriteRepository
     {
-        public BlogWriteRepository(CarDbContext context) : base(context)
+        public CarWriteRepository(CarDbContext context) : base(context)
         {
 
         }

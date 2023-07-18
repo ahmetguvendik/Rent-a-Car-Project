@@ -13,6 +13,9 @@
     <None Remove="CQRS\Commands\User\CreateUser\" />
     <None Remove="CQRS\Commands\User\LoginUser\" />
     <None Remove="Repositories\" />
+    <None Remove="CQRS\Commands\User\SignOutUser\" />
+    <None Remove="CQRS\Commands\Car\" />
+    <None Remove="CQRS\Commands\Car\CreateCar\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CQRS\" />
@@ -21,6 +24,9 @@
     <Folder Include="CQRS\Commands\User\CreateUser\" />
     <Folder Include="CQRS\Commands\User\LoginUser\" />
     <Folder Include="Repositories\" />
+    <Folder Include="CQRS\Commands\User\SignOutUser\" />
+    <Folder Include="CQRS\Commands\Car\" />
+    <Folder Include="CQRS\Commands\Car\CreateCar\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.9" />

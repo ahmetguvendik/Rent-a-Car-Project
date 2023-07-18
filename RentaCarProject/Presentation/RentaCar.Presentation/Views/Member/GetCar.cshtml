@@ -1,0 +1,34 @@
+﻿@using Domain.Entities
+@model IQueryable<Car>
+
+<table class="mt-4 table table-hover">
+    <thead>
+        <tr>
+
+            <th>Name</th>
+            <th>Price</th>
+            <th>UserName</th>
+            <th>IsPay</th>
+            <th>Pay</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <th>@item.Marka</th>
+                <th>@item.Model</th>
+                <th>@item.IsAirBag</th>
+                <th>@item.IsRent</th>
+                @if (item.IsRent == false)
+                {
+                    <th><a asp-action="Pay" asp-controller="Bill" asp-route-id=@item.Id>Pay</a></th>
+                }
+
+            </tr>
+        }
+
+    </tbody>
+
+</table>

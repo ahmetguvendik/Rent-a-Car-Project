@@ -6,7 +6,7 @@ namespace Application.Repositories
 {
 	public interface IWriteRepository<T> : IRepository<T> where T : Car
     {
-        Task AddBlogAsync(T model);
+        Task AddAsync(T model);
         bool Remove(T model);
         Task<bool> RemoveAsync(string id);
         Task SaveAsync();

@@ -1,0 +1,75 @@
+﻿@using Application.CQRS.Commands.Car.CreateCar
+@model CreateCarCommandResponse
+
+<form asp-action="CreateCar" asp-controller="Admin" method="post">
+    <div class="mb-3">
+        <label>
+            Marka:
+        </label>
+        <span class="text-danger" asp-validation-for=@Model.Marka></span>
+        <input type="text" asp-for=@Model.Marka class=form-control />
+    </div>
+
+    <br />
+
+    <div class="mb-3">
+        <label>
+            Model:
+        </label>
+        <span class="text-danger" asp-validation-for=@Model.Model></span>
+        <input type="number" asp-for=@Model.Model class=form-control />
+    </div>
+
+    <br />
+
+    <div class="mb-3">
+        <label>
+            Yakit:
+        </label>
+        <span class="text-danger" asp-validation-for=@Model.Yakit></span>
+        <input type="text" asp-for=@Model.Yakit class=form-control />
+    </div>
+
+    <br />
+
+    <div class="mb-3">
+        <label>
+            Yil:
+        </label>
+        <span class="text-danger" asp-validation-for=@Model.Yil></span>
+        <input type="text" asp-for=@Model.Yil class=form-control />
+    </div>
+
+    <br />
+
+    <div class="mb-3">
+        <label>
+            Vites:
+        </label>
+        <span class="text-danger" asp-validation-for=@Model.Vites></span>
+        <input type="text" asp-for=@Model.Vites class=form-control />
+    </div>
+
+    <div class="mb-3">
+        <label>
+            Airbag Var mi:
+        </label>
+        <span class="text-danger" asp-validation-for=@Model.Yakit></span>
+        <input type="text" asp-for=@Model.Yakit class=form-control />
+    </div>
+
+    <br />
+
+    <br />
+
+    <div>
+        <button>
+            Save
+        </button>
+    </div>
+
+    <div>
+        @ViewBag.ErrorMessage
+    </div>
+
+</form>

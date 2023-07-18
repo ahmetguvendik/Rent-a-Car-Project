@@ -11,10 +11,12 @@
   <ItemGroup>
     <None Remove="Views\Admin\" />
     <None Remove="Views\User\" />
+    <None Remove="Views\Member\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Admin\" />
     <Folder Include="Views\User\" />
+    <Folder Include="Views\Member\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Core\Application\Application.csproj">

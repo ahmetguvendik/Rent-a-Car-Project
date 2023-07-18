@@ -8,7 +8,7 @@ namespace Persistance.Repositories
 {
 	public class CarReadRepository : ReadRepository<Car>, ICarReadRepository
     {
-        public BlogReadRepository(CarDbContext context) : base(context)
+        public CarReadRepository(CarDbContext context) : base(context)
         {
         }
     }

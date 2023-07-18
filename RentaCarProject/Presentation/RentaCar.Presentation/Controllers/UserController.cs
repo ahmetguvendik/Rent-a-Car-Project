@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Application.CQRS.Commands.User.CreateUser;
 using Application.CQRS.Commands.User.LoginUser;
+using Application.CQRS.Commands.User.SignOutUser;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -34,7 +35,7 @@ namespace RentaCar.Presentation.Controllers
             }
             else if(response.Role == "Member")
             {
-                return View();
+                return RedirectToAction("GetCar", "Member");
             }
 
             return View(response);
@@ -51,6 +52,14 @@ namespace RentaCar.Presentation.Controllers
             var response = await _mediator.Send(model);
             return View(response);
         }
+
+        public async Task<IActionResult> SignOut()
+        {
+            await _mediator.Send(new SignOutUserCommandRequest());
+            return RedirectToAction("SignIn","User");
+
+        }
+
     }
 }
 

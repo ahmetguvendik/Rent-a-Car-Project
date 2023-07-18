@@ -8,13 +8,13 @@ namespace Persistance.Repositories
 {
 	public class WriteRepository<T> : IWriteRepository<T> where T : Car
     {
-		public WriteRepository()
+		public WriteRepository(Contexts.CarDbContext context)
 		{
 		}
 
         public DbSet<T> Table => throw new NotImplementedException();
 
-        public Task AddBlogAsync(T model)
+        public Task AddAsync(T model)
         {
             throw new NotImplementedException();
         }
