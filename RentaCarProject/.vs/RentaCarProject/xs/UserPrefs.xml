@@ -1,28 +1,58 @@
 ﻿<Properties StartupConfiguration="{B0AD18C4-AE97-49F4-B9C5-6FDF5BF78694}|https">
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Infrastructure.Persistance FirstBuild="True" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Infrastructure/Persistance/Contexts/CarDbContext.cs">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Presentation.RentaCar.Presentation PreferredExecutionTarget="/Applications/Brave Browser.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Infrastructure/Persistance/Repositories/CarReadRepository.cs">
     <Files>
-      <File FileName="Infrastructure/Persistance/Contexts/CarDbContext.cs" Line="12" Column="49" />
-      <File FileName="Core/Domain/Entities/AppUser.cs" />
-      <File FileName="Core/Domain/Entities/AppRole.cs" />
-      <File FileName="Core/Domain/Entities/Car.cs" />
-      <File FileName="Infrastructure/Persistance/DesignTimeDbContext.cs" />
+      <File FileName="Core/Application/CQRS/Commands/User/CreateUser/CreateUserCommandResponse.cs" />
+      <File FileName="Core/Application/CQRS/Commands/User/CreateUser/CreateUserCommandRequest.cs" Line="8" Column="6" />
+      <File FileName="Core/Application/CQRS/Commands/User/CreateUser/CreateUserCommandHandler.cs" Line="29" Column="73" />
+      <File FileName="Presentation/RentaCar.Presentation/Views/User/SignUp.cshtml" />
+      <File FileName="Presentation/RentaCar.Presentation/Views/User/SignIn.cshtml" Line="2" Column="32" />
+      <File FileName="Presentation/RentaCar.Presentation/Controllers/UserController.cs" Line="40" Column="35" />
+      <File FileName="Presentation/RentaCar.Presentation/Program.cs" />
+      <File FileName="Core/Application/ServiceRegistration.cs" Line="1" Column="1" />
+      <File FileName="Infrastructure/Persistance/ServiceRegistration.cs" Line="14" Column="150" />
+      <File FileName="Core/Domain/Entities/AppUser.cs" Line="8" Column="3" />
+      <File FileName="Core/Domain/Entities/Car.cs" Line="1" Column="1" />
+      <File FileName="Core/Domain/Entities/AppRole.cs" Line="1" Column="1" />
+      <File FileName="Core/Application/CQRS/Commands/User/LoginUser/LoginUserCommandRequest.cs" Line="10" Column="45" />
+      <File FileName="Core/Application/CQRS/Commands/User/LoginUser/LoginUserCommandHandler.cs" Line="44" Column="18" />
+      <File FileName="Core/Application/CQRS/Commands/User/LoginUser/LoginUserCommandResponse.cs" Line="9" Column="41" />
+      <File FileName="Presentation/RentaCar.Presentation/Controllers/AdminController.cs" Line="1" Column="1" />
+      <File FileName="Core/Application/Repositories/IRepository.cs" Line="9" Column="32" />
+      <File FileName="Core/Application/Repositories/IReadRepository.cs" Line="9" Column="32" />
+      <File FileName="Core/Application/Repositories/IWriteRepository.cs" Line="9" Column="36" />
+      <File FileName="Core/Application/Repositories/ICarWriteRepository.cs" Line="9" Column="3" />
+      <File FileName="Core/Application/Repositories/ICarReadRepository.cs" Line="7" Column="3" />
+      <File FileName="Infrastructure/Persistance/Repositories/WriteRepository.cs" Line="9" Column="43" />
+      <File FileName="Infrastructure/Persistance/Repositories/ReadRepository.cs" Line="9" Column="40" />
+      <File FileName="Infrastructure/Persistance/Repositories/CarWriteRepository.cs" Line="11" Column="27" />
+      <File FileName="Infrastructure/Persistance/Repositories/CarReadRepository.cs" Line="12" Column="10" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="RentaCarProject" expanded="True">
             <Node name="Core" expanded="True">
-              <Node name="Application" expanded="True" />
-              <Node name="Domain" expanded="True">
-                <Node name="Entities" expanded="True" />
+              <Node name="Application" expanded="True">
+                <Node name="Repositories" expanded="True" />
               </Node>
             </Node>
             <Node name="Infrastructure" expanded="True">
-              <Node name="Persistance" expanded="True" selected="True">
-                <Node name="Contexts" expanded="True" />
+              <Node name="Persistance" expanded="True">
+                <Node name="Repositories" expanded="True">
+                  <Node name="CarReadRepository.cs" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+            <Node name="Presentation" expanded="True">
+              <Node name="RentaCar.Presentation" expanded="True">
+                <Node name="Controllers" expanded="True" />
+                <Node name="Views" expanded="True">
+                  <Node name="User" expanded="True" />
+                </Node>
               </Node>
             </Node>
           </Node>
@@ -33,10 +63,6 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Core.Domain FirstBuild="True" />
-  <MonoDevelop.Ide.ItemProperties.Presentation.RentaCar.Presentation PreferredExecutionTarget="/Applications/Brave Browser.app" />
-  <MonoDevelop.Ide.ItemProperties.Core.Application FirstBuild="True" />
   <DisabledProjects>
     <String>Core/Domain/Application/Application.csproj</String>
   </DisabledProjects>

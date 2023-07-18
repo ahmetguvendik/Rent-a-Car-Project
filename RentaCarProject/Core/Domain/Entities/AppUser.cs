@@ -5,7 +5,7 @@ namespace Domain.Entities
 {
 	public class AppUser : IdentityUser<string>
     {
-		public int TcNo { get; set; }	
+		
 	}		
 }
 

@@ -1,7 +1,13 @@
-﻿var builder = WebApplication.CreateBuilder(args);
+﻿using System.Reflection;
+using Application;
+using Persistance;
+
+var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddPersistanceService();
+builder.Services.AddMediatorService();
 
 var app = builder.Build();
 
