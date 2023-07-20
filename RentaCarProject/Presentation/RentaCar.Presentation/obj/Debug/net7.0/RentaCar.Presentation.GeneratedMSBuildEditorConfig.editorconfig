@@ -24,6 +24,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vR2V0Q2FyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/ahmetguvendik/Desktop/Projeler/Asp.NetCore/RentaCarProject/Presentation/RentaCar.Presentation/Views/Admin/GetRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vR2V0Um9sZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ahmetguvendik/Desktop/Projeler/Asp.NetCore/RentaCarProject/Presentation/RentaCar.Presentation/Views/Admin/GetUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vR2V0VXNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ahmetguvendik/Desktop/Projeler/Asp.NetCore/RentaCarProject/Presentation/RentaCar.Presentation/Views/Admin/GetUserRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vR2V0VXNlclJvbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/ahmetguvendik/Desktop/Projeler/Asp.NetCore/RentaCarProject/Presentation/RentaCar.Presentation/Views/Admin/UpdateCar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vVXBkYXRlQ2FyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -38,6 +50,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/ahmetguvendik/Desktop/Projeler/Asp.NetCore/RentaCarProject/Presentation/RentaCar.Presentation/Views/Member/GetCar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWVtYmVyL0dldENhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ahmetguvendik/Desktop/Projeler/Asp.NetCore/RentaCarProject/Presentation/RentaCar.Presentation/Views/Member/Rent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWVtYmVyL1JlbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/ahmetguvendik/Desktop/Projeler/Asp.NetCore/RentaCarProject/Presentation/RentaCar.Presentation/Views/Shared/Error.cshtml]

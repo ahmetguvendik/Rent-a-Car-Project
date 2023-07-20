@@ -18,6 +18,10 @@
     <None Remove="CQRS\Commands\Car\CreateCar\" />
     <None Remove="CQRS\Commands\Car\RemoveCar\" />
     <None Remove="CQRS\Commands\Car\UpdateCar\" />
+    <None Remove="Services\" />
+    <None Remove="ViewModels\" />
+    <None Remove="CQRS\Commands\Rent\" />
+    <None Remove="CQRS\Commands\Rent\CreateRent\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CQRS\" />
@@ -31,6 +35,10 @@
     <Folder Include="CQRS\Commands\Car\CreateCar\" />
     <Folder Include="CQRS\Commands\Car\RemoveCar\" />
     <Folder Include="CQRS\Commands\Car\UpdateCar\" />
+    <Folder Include="Services\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="CQRS\Commands\Rent\" />
+    <Folder Include="CQRS\Commands\Rent\CreateRent\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.9" />

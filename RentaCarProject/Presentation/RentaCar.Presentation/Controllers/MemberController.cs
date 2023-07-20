@@ -22,6 +22,11 @@ namespace RentaCar.Presentation.Controllers
             var cars =  _readRepository.GetAll();
             return View(cars);
         }
+
+        public IActionResult Rent()
+        {
+            return View();
+        }
     }
 }
 

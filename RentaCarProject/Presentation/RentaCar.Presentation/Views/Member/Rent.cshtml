@@ -1,0 +1,58 @@
+﻿@using Application.CQRS.Commands.Rent.CreateRent
+@model CreateRentCommandResponse
+
+<form asp-action="Rent" asp-controller="Member" method="post">
+
+    <div class="mb-3">
+        <label>
+            TcNo:
+        </label>
+        <span class="text-danger" asp-validation-for=@Model.TcNo></span>
+        <input type="text" asp-for=@Model.TcNo class=form-control />
+    </div>
+
+    <br />
+
+    <div class="mb-3">
+        <label>
+            Isim:
+        </label>
+        <span class="text-danger" asp-validation-for=@Model.Name></span>
+        <input type="text" asp-for=@Model.Name class=form-control />
+    </div>
+
+    <br />
+
+    <div class="mb-3">
+        <label>
+            Soyisim:
+        </label>
+        <span class="text-danger" asp-validation-for=@Model.Surname></span>
+        <input type="text" asp-for=@Model.Surname class=form-control />
+    </div>
+
+    <br />
+
+    <div class="mb-3">
+        <label>
+            Dogum Yili:
+        </label>
+        <span class="text-danger" asp-validation-for=@Model.Year></span>
+        <input type="text" asp-for=@Model.Year class=form-control />
+    </div>
+
+    <br />
+
+ 
+
+    <div>
+        <button>
+            Onaya Yolla
+        </button>
+    </div>
+
+    <div>
+        @ViewBag.ErrorMessage
+    </div>
+
+</form>

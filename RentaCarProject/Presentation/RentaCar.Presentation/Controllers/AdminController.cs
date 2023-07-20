@@ -2,6 +2,7 @@
 using Application.CQRS.Commands.Car.RemoveCar;
 using Application.CQRS.Commands.Car.UpdateCar;
 using Application.Repositories;
+using Application.Services;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -13,10 +14,12 @@ namespace RentaCar.Presentation.Controllers
     {
         private readonly ICarReadRepository _readRepository;
         private readonly IMediator _mediator;
-        public AdminController(ICarReadRepository readRepository,IMediator mediator)
+        private readonly IUserService _userService;
+        public AdminController(ICarReadRepository readRepository,IMediator mediator,IUserService userService)
         {
             _readRepository = readRepository;
             _mediator = mediator;
+            _userService = userService;
         }
 
         public IActionResult GetCar()
@@ -56,6 +59,24 @@ namespace RentaCar.Presentation.Controllers
         {
             await _mediator.Send(request);
             return RedirectToAction("CreateCar", "Admin");
+        }
+
+        public IActionResult GetUser()
+        {
+            var users = _userService.GetUser();
+            return View(users);
+        }
+
+        public IActionResult GetRole()
+        {
+            var roles = _userService.GetRole();
+            return View(roles);
+        }
+
+        public IActionResult GetUserRole()
+        {
+            var userRole = _userService.GetUserRoles();
+            return View(userRole);
         }
     }
 }

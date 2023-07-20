@@ -1,0 +1,28 @@
+﻿@using Domain.Entities
+@model List<AppRole>
+
+<table class="mt-4 table table-hover">
+    <thead>
+        <tr>
+
+            <th>Id</th>
+            <th>Role</th>
+          
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <th>@item.Id</th>
+                <th>@item.Name</th>
+      
+
+            </tr>
+        }
+
+    </tbody>
+
+</table>

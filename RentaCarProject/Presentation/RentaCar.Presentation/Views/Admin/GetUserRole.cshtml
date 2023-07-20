@@ -1,0 +1,28 @@
+﻿@using Application.ViewModels
+@model IQueryable<UserRoleViewModel>
+
+<table class="mt-4 table table-hover">
+    <thead>
+        <tr>
+
+     
+            <th>UserName</th>
+            <th>RoleName</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <th>@item.UserName</th>
+                <th>@item.RoleName</th>
+               
+
+            </tr>
+        }
+
+    </tbody>
+
+</table>

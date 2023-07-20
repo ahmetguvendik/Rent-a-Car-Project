@@ -1,11 +1,13 @@
 ﻿using System;
 using Application.Repositories;
+using Application.Services;
 using Domain.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Persistance.Contexts;
 using Persistance.Repositories;
+using Persistance.Services;
 
 namespace Persistance
 {
@@ -17,6 +19,7 @@ namespace Persistance
             collection.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<CarDbContext>().AddTokenProvider<DataProtectorTokenProvider<AppUser>>(TokenOptions.DefaultProvider);
             collection.AddScoped<ICarReadRepository, CarReadRepository>();
             collection.AddScoped<ICarWriteRepository, CarWriteRepository>();
+            collection.AddScoped<IUserService, UserService>();
         }
     }
 }
