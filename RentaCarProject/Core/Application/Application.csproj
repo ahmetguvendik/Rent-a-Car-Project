@@ -16,6 +16,8 @@
     <None Remove="CQRS\Commands\User\SignOutUser\" />
     <None Remove="CQRS\Commands\Car\" />
     <None Remove="CQRS\Commands\Car\CreateCar\" />
+    <None Remove="CQRS\Commands\Car\RemoveCar\" />
+    <None Remove="CQRS\Commands\Car\UpdateCar\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CQRS\" />
@@ -27,6 +29,8 @@
     <Folder Include="CQRS\Commands\User\SignOutUser\" />
     <Folder Include="CQRS\Commands\Car\" />
     <Folder Include="CQRS\Commands\Car\CreateCar\" />
+    <Folder Include="CQRS\Commands\Car\RemoveCar\" />
+    <Folder Include="CQRS\Commands\Car\UpdateCar\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.9" />

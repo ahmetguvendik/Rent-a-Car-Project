@@ -23,9 +23,9 @@ namespace Persistance.Repositories
             return Table;
         }
 
-        public Task<T> GetById(string id)
+        public async Task<T> GetById(string id)
         {
-            throw new NotImplementedException();
+            return await Table.FirstOrDefaultAsync(x => x.Id == id);
         }
     }
 }

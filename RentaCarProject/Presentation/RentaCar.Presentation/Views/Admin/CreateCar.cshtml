@@ -2,6 +2,7 @@
 @model CreateCarCommandResponse
 
 <form asp-action="CreateCar" asp-controller="Admin" method="post">
+
     <div class="mb-3">
         <label>
             Marka:
@@ -17,7 +18,7 @@
             Model:
         </label>
         <span class="text-danger" asp-validation-for=@Model.Model></span>
-        <input type="number" asp-for=@Model.Model class=form-control />
+        <input type="text" asp-for=@Model.Model class=form-control />
     </div>
 
     <br />
@@ -54,8 +55,7 @@
         <label>
             Airbag Var mi:
         </label>
-        <span class="text-danger" asp-validation-for=@Model.Yakit></span>
-        <input type="text" asp-for=@Model.Yakit class=form-control />
+        <input type="checkbox" asp-for=@Model.AirbagVarmi class=form-control />
     </div>
 
     <br />
@@ -64,7 +64,7 @@
 
     <div>
         <button>
-            Save
+            Kaydet  
         </button>
     </div>
 

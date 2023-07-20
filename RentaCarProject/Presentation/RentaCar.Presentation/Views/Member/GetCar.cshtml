@@ -5,11 +5,13 @@
     <thead>
         <tr>
 
-            <th>Name</th>
-            <th>Price</th>
-            <th>UserName</th>
-            <th>IsPay</th>
-            <th>Pay</th>
+            <th>Marka</th>
+            <th>Model</th>
+            <th>Yil</th>
+            <th>Yakit</th>
+            <th>Vites</th>
+            <th>Airbag</th>
+            <th>Airbag</th>
         </tr>
     </thead>
     <tbody>
@@ -19,13 +21,14 @@
 
                 <th>@item.Marka</th>
                 <th>@item.Model</th>
+                <th>@item.Yil</th>
+                <th>@item.Yakit</th>
+                <th>@item.Vites</th>
                 <th>@item.IsAirBag</th>
-                <th>@item.IsRent</th>
                 @if (item.IsRent == false)
                 {
-                    <th><a asp-action="Pay" asp-controller="Bill" asp-route-id=@item.Id>Pay</a></th>
+                    <th><a asp-action="Rent" asp-controller="Member" asp-route-id=@item.Id>Kirala</a></th>
                 }
-
             </tr>
         }
 

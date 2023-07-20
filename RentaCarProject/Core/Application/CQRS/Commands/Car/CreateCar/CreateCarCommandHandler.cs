@@ -19,9 +19,12 @@ namespace Application.CQRS.Commands.Car.CreateCar
             car.Marka = request.Marka;
             car.Model = request.Model;
             car.IsAirBag = request.AirbagVarmi;
+            car.Vites = request.Vites;
             car.Yakit = request.Yakit;
             car.Yil = request.Yil;
             await _writeRepository.AddAsync(car);
+            await _writeRepository.SaveAsync();
+
             return new CreateCarCommandResponse()
             {
                 AirbagVarmi = request.AirbagVarmi,

@@ -28,8 +28,25 @@
                                 <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="SignUp">Kayit Ol</a>
                             </li>
                         }
+                        @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="GetCar">Arabalari Gor</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="CreateCar">Araba Ekle</a>
+                            </li>
+                        }
+                        @if (User.Identity.IsAuthenticated && User.IsInRole("Member"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Member" asp-action="GetCar">Arabalar</a>
+                            </li>
+                            
+                        }
                         @if (User.Identity.IsAuthenticated)
                         {
+                           
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="SignOut">Cikis Yap</a>
                             </li>

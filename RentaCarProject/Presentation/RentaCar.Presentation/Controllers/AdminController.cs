@@ -1,16 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Application.CQRS.Commands.Car.CreateCar;
+﻿using Application.CQRS.Commands.Car.CreateCar;
+using Application.CQRS.Commands.Car.RemoveCar;
+using Application.CQRS.Commands.Car.UpdateCar;
 using Application.Repositories;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-
-// For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace RentaCar.Presentation.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class AdminController : Controller
     {
         private readonly ICarReadRepository _readRepository;
@@ -33,10 +31,31 @@ namespace RentaCar.Presentation.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateCar(CreateCarCommandRequest model)
+        public async Task<IActionResult> CreateCar(CreateCarCommandRequest request)
         {
-            var response = await _mediator.Send(model);
+            var response = await _mediator.Send(request);
             return View(response);
+         }
+
+        public async Task<IActionResult> RemoveCar(string id)
+        {
+            var removedCar = new RemoveCarCommandRequest();
+            removedCar.Id = id;
+            await _mediator.Send(removedCar);
+            return RedirectToAction("GetCar", "Admin"); 
+        }
+
+
+        public async Task<IActionResult> UpdateCar()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> UpdateCar(UpdateCarCommandRequest request)
+        {
+            await _mediator.Send(request);
+            return RedirectToAction("CreateCar", "Admin");
         }
     }
 }

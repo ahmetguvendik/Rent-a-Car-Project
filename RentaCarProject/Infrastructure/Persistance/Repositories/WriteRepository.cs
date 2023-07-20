@@ -3,35 +3,41 @@ using System.Reflection.Metadata;
 using Application.Repositories;
 using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
+using Persistance.Contexts;
 
 namespace Persistance.Repositories
 {
 	public class WriteRepository<T> : IWriteRepository<T> where T : Car
     {
-		public WriteRepository(Contexts.CarDbContext context)
+        private readonly CarDbContext _context;
+		public WriteRepository(CarDbContext context)
 		{
+            _context = context;
 		}
 
-        public DbSet<T> Table => throw new NotImplementedException();
+        public DbSet<T> Table => _context.Set<T>();
 
-        public Task AddAsync(T model)
+        public async Task AddAsync(T model)
         {
-            throw new NotImplementedException();
+            await Table.AddAsync(model);
         }
 
         public bool Remove(T model)
         {
-            throw new NotImplementedException();
+            EntityEntry<T> entityState = Table.Remove(model);
+            return entityState.State == EntityState.Deleted;
         }
 
-        public Task<bool> RemoveAsync(string id)
+        public async Task<bool> RemoveAsync(string id)
         {
-            throw new NotImplementedException();
+            T model = await Table.FirstOrDefaultAsync(x => x.Id == id);
+            return Remove(model);
         }
 
-        public Task SaveAsync()
+        public async Task SaveAsync()
         {
-            throw new NotImplementedException();
+            await _context.SaveChangesAsync();
         }
     }
 }
