@@ -22,6 +22,7 @@ namespace Persistance
             collection.AddScoped<IRentReadRepository, RentReadRepository>();
             collection.AddScoped<IRentWriteRepository, RentWriteRepository>();  
             collection.AddScoped<IUserService, UserService>();
+            collection.AddScoped<IRentService, RentService>();
         }
     }
 }

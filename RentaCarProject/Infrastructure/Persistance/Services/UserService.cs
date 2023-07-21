@@ -40,7 +40,8 @@ namespace Persistance.Services
                         select new UserRoleViewModel
                         {
                             UserName = user.UserName,
-                            RoleName = role.Name
+                            RoleName = role.Name,
+                            
                         };
 
             return model;

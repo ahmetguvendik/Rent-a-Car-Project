@@ -45,6 +45,9 @@
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="GetUserRole">Kullanici-Rol Gor</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="GetRent">Kiralama Taleplerini Gor</a>
+                            </li>
                         }
                         @if (User.Identity.IsAuthenticated && User.IsInRole("Member"))
                         {

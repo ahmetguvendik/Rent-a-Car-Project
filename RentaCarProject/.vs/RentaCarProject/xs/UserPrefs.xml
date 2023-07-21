@@ -1,21 +1,37 @@
 ﻿<Properties StartupConfiguration="{B0AD18C4-AE97-49F4-B9C5-6FDF5BF78694}|https">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Presentation.RentaCar.Presentation PreferredExecutionTarget="/Applications/Brave Browser.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/ahmetguvendik/Desktop/Projeler/Asp.NetCore/RentaCarProject/Presentation/RentaCar.Presentation/Controllers/MemberController.cs" relfile="Presentation/RentaCar.Presentation/Controllers/MemberController.cs" line="35" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Presentation/RentaCar.Presentation/Controllers/MemberController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Infrastructure/Persistance/Services/RentService.cs">
     <Files>
-      <File FileName="Core/Application/CQRS/Commands/Rent/CreateRent/CreateRentCommandHandler.cs" Line="38" Column="40" />
+      <File FileName="Core/Application/CQRS/Commands/Rent/CreateRent/CreateRentCommandHandler.cs" />
       <File FileName="Presentation/RentaCar.Presentation/Controllers/MemberController.cs" Line="40" Column="1" />
-      <File FileName="Presentation/RentaCar.Presentation/Views/Member/Rent.cshtml" Line="5" Column="1" />
+      <File FileName="Presentation/RentaCar.Presentation/Views/Member/Rent.cshtml" />
       <File FileName="Presentation/RentaCar.Presentation/Views/Member/GetCar.cshtml" Line="39" Column="9" />
-      <File FileName="Core/Application/CQRS/Commands/Rent/CreateRent/CreateRentCommandRequest.cs" Line="9" Column="23" />
-      <File FileName="Core/Application/CQRS/Commands/Rent/CreateRent/CreateRentCommandResponse.cs" Line="13" Column="41" />
+      <File FileName="Core/Application/CQRS/Commands/Rent/CreateRent/CreateRentCommandRequest.cs" />
+      <File FileName="Core/Application/CQRS/Commands/Rent/CreateRent/CreateRentCommandResponse.cs" />
       <File FileName="Presentation/RentaCar.Presentation/Controllers/UserController.cs" Line="32" Column="1" />
-      <File FileName="Core/Domain/Entities/Rent.cs" Line="14" Column="37" />
-      <File FileName="Presentation/RentaCar.Presentation/Controllers/AdminController.cs" Line="1" Column="1" />
-      <File FileName="Presentation/RentaCar.Presentation/Program.cs" Line="34" Column="18" />
+      <File FileName="Core/Domain/Entities/Rent.cs" Line="6" Column="9" />
+      <File FileName="Presentation/RentaCar.Presentation/Controllers/AdminController.cs" Line="94" Column="56" />
+      <File FileName="Presentation/RentaCar.Presentation/Program.cs" />
+      <File FileName="Presentation/RentaCar.Presentation/Views/Shared/_Layout.cshtml" Line="49" Column="147" />
+      <File FileName="Presentation/RentaCar.Presentation/Views/Admin/GetRent.cshtml" Line="23" Column="17" />
+      <File FileName="Presentation/RentaCar.Presentation/Views/Admin/GetCar.cshtml" Line="34" Column="17" />
+      <File FileName="Core/Application/Services/IRentService.cs" Line="9" Column="3" />
+      <File FileName="Core/Application/ViewModels/UserRoleViewModel.cs" Line="6" Column="3" />
+      <File FileName="Core/Application/ViewModels/CarRentViewModel.cs" Line="8" Column="41" />
+      <File FileName="Core/Application/Services/IUserService.cs" Line="1" Column="1" />
+      <File FileName="Infrastructure/Persistance/Services/RentService.cs" Line="39" Column="6" />
+      <File FileName="Infrastructure/Persistance/Services/UserService.cs" Line="43" Column="50" />
+      <File FileName="Core/Application/ServiceRegistration.cs" Line="1" Column="1" />
+      <File FileName="Infrastructure/Persistance/ServiceRegistration.cs" Line="25" Column="60" />
+      <File FileName="Presentation/RentaCar.Presentation/Views/Admin/GetRole.cshtml" Line="1" Column="1" />
+      <File FileName="Presentation/RentaCar.Presentation/Views/Admin/UpdateCar.cshtml" Line="1" Column="1" />
+      <File FileName="Core/Application/CQRS/Commands/Rent/RentCar/RentCarCommandRequest.cs" Line="8" Column="39" />
+      <File FileName="Core/Application/CQRS/Commands/Rent/RentCar/RentCarCommandResponse.cs" Line="1" Column="1" />
+      <File FileName="Core/Application/CQRS/Commands/Rent/RentCar/RentCarCommandHandler.cs" Line="17" Column="58" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -26,25 +42,31 @@
                 <Node name="CQRS" expanded="True">
                   <Node name="Commands" expanded="True">
                     <Node name="Rent" expanded="True">
-                      <Node name="CreateRent" expanded="True" />
+                      <Node name="RentCar" expanded="True" />
                     </Node>
                   </Node>
                 </Node>
+                <Node name="Services" expanded="True" />
+                <Node name="ViewModels" expanded="True" />
               </Node>
               <Node name="Domain" expanded="True">
                 <Node name="Entities" expanded="True" />
               </Node>
             </Node>
             <Node name="Infrastructure" expanded="True">
-              <Node name="Persistance" expanded="True" />
+              <Node name="Persistance" expanded="True">
+                <Node name="Services" expanded="True">
+                  <Node name="RentService.cs" selected="True" />
+                </Node>
+              </Node>
             </Node>
             <Node name="Presentation" expanded="True">
               <Node name="RentaCar.Presentation" expanded="True">
-                <Node name="Controllers" expanded="True">
-                  <Node name="MemberController.cs" selected="True" />
-                </Node>
+                <Node name="Controllers" expanded="True" />
                 <Node name="Views" expanded="True">
+                  <Node name="Admin" expanded="True" />
                   <Node name="Member" expanded="True" />
+                  <Node name="Shared" expanded="True" />
                 </Node>
               </Node>
             </Node>
@@ -53,8 +75,6 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Presentation.RentaCar.Presentation PreferredExecutionTarget="/Applications/Brave Browser.app" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

@@ -1,0 +1,40 @@
+﻿@using Application.ViewModels
+@model IQueryable<CarRentViewModel>
+
+<table class="mt-4 table table-hover">
+    <thead>
+        <tr>
+
+
+            <th>TC</th>
+            <th>Ad</th>
+            <th>Soyad</th>
+            <th>Baslangic Tarihi</th>
+            <th>Bitis Tarihi</th>
+            <th>CarName</th>
+            <th>UserName</th>
+            <th>IsOK</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <th>@item.TcNo</th>
+                <th>@item.Name</th>
+                <th>@item.Surname</th>
+                <th>@item.StartingTime</th>
+                <th>@item.FinisihingTime</th>
+                <th>@item.CarName</th>
+                <th>@item.UserName</th>
+                <th>@item.IsOk</th>
+                <th><a asp-action="RentCar" asp-controller="Admin" asp-route-id="@item.Id">ONAYLA</a></th>
+
+            </tr>
+        }
+
+    </tbody>
+
+</table>
