@@ -22,6 +22,7 @@ namespace Application.CQRS.Commands.Car.CreateCar
             car.Vites = request.Vites;
             car.Yakit = request.Yakit;
             car.Yil = request.Yil;
+            car.Plaka = request.Plaka;
             await _writeRepository.AddAsync(car);
             await _writeRepository.SaveAsync();
 
@@ -32,7 +33,8 @@ namespace Application.CQRS.Commands.Car.CreateCar
                 Model = request.Model,
                 Vites = request.Vites,
                 Yakit = request.Yakit,
-                Yil = request.Yil
+                Yil = request.Yil,
+                Plaka = request.Plaka
             };
         }
     }

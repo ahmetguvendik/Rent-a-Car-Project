@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using Persistance.Contexts;
@@ -11,9 +12,11 @@ using Persistance.Contexts;
 namespace Persistance.Migrations
 {
     [DbContext(typeof(CarDbContext))]
-    partial class CarDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230721135417_mig_5")]
+    partial class mig_5
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -168,9 +171,8 @@ namespace Persistance.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("FinisihingTime")
-                        .IsRequired()
-                        .HasColumnType("text");
+                    b.Property<DateTime>("FinisihingTime")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<bool>("IsOk")
                         .HasColumnType("boolean");
@@ -179,9 +181,8 @@ namespace Persistance.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("StartingTime")
-                        .IsRequired()
-                        .HasColumnType("text");
+                    b.Property<DateTime>("StartingTime")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Surname")
                         .IsRequired()

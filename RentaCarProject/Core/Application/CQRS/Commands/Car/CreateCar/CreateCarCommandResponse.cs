@@ -9,6 +9,7 @@ namespace Application.CQRS.Commands.Car.CreateCar
         public string Yakit { get; set; }
         public string Vites { get; set; }
         public bool AirbagVarmi { get; set; }
+        public string Plaka { get; set; }
     }
 }
 

@@ -35,15 +35,25 @@
 
     <div class="mb-3">
         <label>
-            Dogum Yili:
+            Baslangic Tarihi:
         </label>
-        <span class="text-danger" asp-validation-for=@Model.Year></span>
-        <input type="text" asp-for=@Model.Year class=form-control />
+        <span class="text-danger" asp-validation-for=@Model.StartingTime></span>
+        <input type="text" asp-for=@Model.StartingTime class=form-control />
     </div>
 
     <br />
 
- 
+    <div class="mb-3">
+        <label>
+            Bitis Tarihi:
+        </label>
+        <span class="text-danger" asp-validation-for=@Model.FinisihingTime></span>
+        <input type="text" asp-for=@Model.FinisihingTime class=form-control />
+    </div>
+
+    <br />
+
+
 
     <div>
         <button>

@@ -7,7 +7,7 @@ using Persistance.Contexts;
 
 namespace Persistance.Repositories
 {
-	public class ReadRepository<T> : IReadRepository<T> where T : Car
+	public class ReadRepository<T> : IReadRepository<T> where T : BaseEntity
     {
         private CarDbContext _context;
 

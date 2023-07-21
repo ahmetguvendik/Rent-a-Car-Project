@@ -9,6 +9,7 @@
             <th>Model</th>
             <th>Yil</th>
             <th>Yakit</th>
+            <th>Plaka</th>
             <th>Vites</th>
             <th>Airbag</th>
             <th>Kirala</th>
@@ -23,11 +24,12 @@
                 <th>@item.Model</th>
                 <th>@item.Yil</th>
                 <th>@item.Yakit</th>
+                <th>@item.Plaka</th>
                 <th>@item.Vites</th>
                 <th>@item.IsAirBag</th>
                 @if (item.IsRent == false)
                 {
-                    <th><a asp-action="Rent" asp-controller="Member" asp-route-id=@item.Id>Kirala</a></th>
+                    <th><a asp-action="Rent" asp-controller="Member" asp-route-id=@item.Id>Kirala</a></th>  
                 }
             </tr>
         }

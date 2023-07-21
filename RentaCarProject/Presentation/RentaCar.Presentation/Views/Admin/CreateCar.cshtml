@@ -25,6 +25,15 @@
 
     <div class="mb-3">
         <label>
+            Plaka:
+        </label>
+        <span class="text-danger" asp-validation-for=@Model.Plaka></span>
+        <input type="text" asp-for=@Model.Plaka class=form-control />
+    </div>
+
+
+    <div class="mb-3">
+        <label>
             Yakit:
         </label>
         <span class="text-danger" asp-validation-for=@Model.Yakit></span>
@@ -64,7 +73,7 @@
 
     <div>
         <button>
-            Kaydet  
+            Kaydet
         </button>
     </div>
 

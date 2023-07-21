@@ -9,7 +9,8 @@ namespace Persistance.Contexts
     {
         public CarDbContext(DbContextOptions options) : base(options) { }
 
-        public DbSet<Car> Cars { get; set; }    
+        public DbSet<Car> Cars { get; set; }
+        public DbSet<Rent> Rents { get; set; }  
     }
 }
 

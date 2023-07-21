@@ -19,6 +19,8 @@ namespace Persistance
             collection.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<CarDbContext>().AddTokenProvider<DataProtectorTokenProvider<AppUser>>(TokenOptions.DefaultProvider);
             collection.AddScoped<ICarReadRepository, CarReadRepository>();
             collection.AddScoped<ICarWriteRepository, CarWriteRepository>();
+            collection.AddScoped<IRentReadRepository, RentReadRepository>();
+            collection.AddScoped<IRentWriteRepository, RentWriteRepository>();  
             collection.AddScoped<IUserService, UserService>();
         }
     }

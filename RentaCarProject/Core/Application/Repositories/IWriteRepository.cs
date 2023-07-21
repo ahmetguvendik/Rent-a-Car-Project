@@ -4,7 +4,7 @@ using Domain.Entities;
 
 namespace Application.Repositories
 {
-	public interface IWriteRepository<T> : IRepository<T> where T : Car
+	public interface IWriteRepository<T> : IRepository<T> where T : BaseEntity
     {
         Task AddAsync(T model);
         bool Remove(T model);

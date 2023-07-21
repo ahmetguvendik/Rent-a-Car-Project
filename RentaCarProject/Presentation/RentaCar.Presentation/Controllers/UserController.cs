@@ -29,7 +29,8 @@ namespace RentaCar.Presentation.Controllers
         public async Task<IActionResult> SignIn(LoginUserCommandRequest model)
         {
             var response = await _mediator.Send(model);
-            if(response.Role == "Admin")
+            HttpContext.Session.SetString("Userid",response.Id);
+            if (response.Role == "Admin")
             {
                 return RedirectToAction("GetCar", "Admin");
             }

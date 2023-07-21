@@ -8,7 +8,7 @@ using Persistance.Contexts;
 
 namespace Persistance.Repositories
 {
-	public class WriteRepository<T> : IWriteRepository<T> where T : Car
+	public class WriteRepository<T> : IWriteRepository<T> where T : BaseEntity
     {
         private readonly CarDbContext _context;
 		public WriteRepository(CarDbContext context)
