@@ -1,5 +1,5 @@
 ﻿using Application.CQRS.Commands.Rent.CreateRent;
-using Application.Repositories;
+using Application.Services;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,17 +9,17 @@ namespace RentaCar.Presentation.Controllers
 {
     public class MemberController : Controller
     {
-        private readonly ICarReadRepository _readRepository;
+        private readonly IRentService _rentService;
         private readonly IMediator _mediator;
-        public MemberController(ICarReadRepository readRepository,IMediator mediator)
+        public MemberController(IMediator mediator,IRentService rentService)
         {
-            _readRepository = readRepository;
             _mediator = mediator;
+            _rentService = rentService;
         }
 
         public IActionResult GetCar()
         {
-            var cars =  _readRepository.GetAll();
+            var cars = _rentService.GetCar();
             return View(cars);
         }
 

@@ -1,5 +1,5 @@
-﻿@using Domain.Entities
-@model IQueryable<Car>
+﻿@using Application.ViewModels
+@model IEnumerable<Rent_Car_View_Model>
 
 <table class="mt-4 table table-hover">
     <thead>
@@ -16,6 +16,7 @@
         </tr>
     </thead>
     <tbody>
+
         @foreach (var item in Model)
         {
             <tr>
@@ -27,9 +28,14 @@
                 <th>@item.Plaka</th>
                 <th>@item.Vites</th>
                 <th>@item.IsAirBag</th>
-                @if (item.IsRent == false)
+                @if (item.IsOk == false)
                 {
-                    <th><a asp-action="Rent" asp-controller="Member" asp-route-id=@item.Id>Kirala</a></th>  
+                    <th><a asp-action="Rent" asp-controller="Member" asp-route-id=@item.CarId>Kirala</a></th>
+
+                }
+                @if (item.IsOk == true)
+                {
+                    <th>Kiralandi</th>
                 }
             </tr>
         }

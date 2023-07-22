@@ -12,8 +12,8 @@ namespace Domain.Entities
 		public bool IsRent { get; set; }
 		public bool IsOk { get; set; }
 		public string Plaka { get; set; }	
-		public AppUser User { get; set; }
-		public string? UserId { get; set; }	
+		public List<Rent> Rents { get; set; }
+		public string RentId { get; set; }
 	}
 }
 
