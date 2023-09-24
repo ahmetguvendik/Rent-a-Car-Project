@@ -2,8 +2,11 @@
 using Application.CQRS.Commands.Car.RemoveCar;
 using Application.CQRS.Commands.Car.UpdateCar;
 using Application.CQRS.Commands.Rent.RentCar;
-using Application.Repositories;
-using Application.Services;
+using Application.CQRS.Queries.Car.GetAllCar;
+using Application.CQRS.Queries.Rent.GetAllRent;
+using Application.CQRS.Queries.User.GetAllRole;
+using Application.CQRS.Queries.User.GetAllUser;
+using Application.CQRS.Queries.User.GetAllUserRole;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -13,22 +16,16 @@ namespace RentaCar.Presentation.Controllers
     [Authorize(Roles = "Admin")]
     public class AdminController : Controller
     {
-        private readonly ICarReadRepository _readRepository; 
         private readonly IMediator _mediator;
-        private readonly IUserService _userService;
-        private readonly IRentService _rentService;
-        public AdminController(ICarReadRepository readRepository,IMediator mediator,IUserService userService,IRentService rentService)
+        public AdminController(IMediator mediator)
         {
-            _readRepository = readRepository;
             _mediator = mediator;
-            _userService = userService;
-            _rentService = rentService;
         }
 
-        public IActionResult GetCar()
+        public async Task<IActionResult> GetCar(GetAllCarQueryRequest model)
         {
-            var cars = _readRepository.GetAll();
-            return View(cars);
+            var response = await _mediator.Send(model);
+            return View(response);
         }
 
         public IActionResult CreateCar()
@@ -64,33 +61,33 @@ namespace RentaCar.Presentation.Controllers
             return RedirectToAction("CreateCar", "Admin");
         }
 
-        public IActionResult GetUser()
+        public async Task<IActionResult> GetUser(GetAllUserQueryRequest model)
         {
-            var users = _userService.GetUser();
+            var users = await _mediator.Send(model);
             return View(users);
         }
 
-        public IActionResult GetRole()
+        public async Task<IActionResult> GetRole(GetAllRoleQueryRequest model)
         {
-            var roles = _userService.GetRole();
+            var roles = await _mediator.Send(model);
             return View(roles);
         }
 
-        public IActionResult GetUserRole()
+        public async Task<IActionResult> GetUserRole(GetAllUserRoleQueryRequest model)
         {
-            var userRole = _userService.GetUserRoles();
-            return View(userRole);
+            var Userroles = await _mediator.Send(model);
+            return View(Userroles);
         }
 
-        public IActionResult GetRent()
+        public async Task<IActionResult> GetRent(GetAllRentQueryRequest model)
         {
-            var response = _rentService.GetRent();
+            var response = await _mediator.Send(model);
             return View(response);
         }
 
         public async Task<IActionResult> RentCar(RentCarCommandRequest request)
         {
-            var response = await _mediator.Send(request);
+            await _mediator.Send(request);
             return RedirectToAction("GetCar", "Admin");
         }
 

@@ -1,4 +1,6 @@
 ﻿using Application.CQRS.Commands.Rent.CreateRent;
+using Application.CQRS.Queries.Rent.GetAllRent;
+using Application.CQRS.Queries.Rent.GetAllRentMember;
 using Application.Services;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -9,18 +11,16 @@ namespace RentaCar.Presentation.Controllers
 {
     public class MemberController : Controller
     {
-        private readonly IRentService _rentService;
         private readonly IMediator _mediator;
-        public MemberController(IMediator mediator,IRentService rentService)
+        public MemberController(IMediator mediator)
         {
             _mediator = mediator;
-            _rentService = rentService;
         }
 
-        public IActionResult GetCar()
+        public async Task<IActionResult> GetCar(GetAllRentMemberQueryRequest model)
         {
-            var cars = _rentService.GetCar();
-            return View(cars);
+            var response = await _mediator.Send(model);
+            return View(response);
         }
 
         public IActionResult Rent()

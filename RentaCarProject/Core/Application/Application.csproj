@@ -23,6 +23,16 @@
     <None Remove="CQRS\Commands\Rent\" />
     <None Remove="CQRS\Commands\Rent\CreateRent\" />
     <None Remove="CQRS\Commands\Rent\RentCar\" />
+    <None Remove="CQRS\Queries\" />
+    <None Remove="CQRS\Queries\User\" />
+    <None Remove="CQRS\Queries\User\GetAllUser\" />
+    <None Remove="CQRS\Queries\User\GetAllRole\" />
+    <None Remove="CQRS\Queries\User\GetAllUserRole\" />
+    <None Remove="CQRS\Queries\Rent\" />
+    <None Remove="CQRS\Queries\Rent\GetAllRent\" />
+    <None Remove="CQRS\Queries\Car\" />
+    <None Remove="CQRS\Queries\Car\GetAllCar\" />
+    <None Remove="CQRS\Queries\Rent\GetAllRentMember\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CQRS\" />
@@ -41,6 +51,16 @@
     <Folder Include="CQRS\Commands\Rent\" />
     <Folder Include="CQRS\Commands\Rent\CreateRent\" />
     <Folder Include="CQRS\Commands\Rent\RentCar\" />
+    <Folder Include="CQRS\Queries\" />
+    <Folder Include="CQRS\Queries\User\" />
+    <Folder Include="CQRS\Queries\User\GetAllUser\" />
+    <Folder Include="CQRS\Queries\User\GetAllRole\" />
+    <Folder Include="CQRS\Queries\User\GetAllUserRole\" />
+    <Folder Include="CQRS\Queries\Rent\" />
+    <Folder Include="CQRS\Queries\Rent\GetAllRent\" />
+    <Folder Include="CQRS\Queries\Car\" />
+    <Folder Include="CQRS\Queries\Car\GetAllCar\" />
+    <Folder Include="CQRS\Queries\Rent\GetAllRentMember\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.9" />
